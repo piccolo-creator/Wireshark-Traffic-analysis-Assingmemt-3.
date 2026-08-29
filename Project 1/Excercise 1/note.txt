@@ -3,8 +3,8 @@ Wireshark Network Capture Guide
 This guide covers launching a fresh packet capture session from the Wireshark splash screen to record web traffic.
 
 Setup Requirements
-* **Wireshark Version:** 4.6.6 (as shown in the welcome panel)
-* **Active User Profile:** victor (Default profile)
+Wireshark Version:** 4.6.6 (as shown in the welcome panel)
+Active User Profile:** victor (Default profile)
 
 Step-by-Step Instructions
 
