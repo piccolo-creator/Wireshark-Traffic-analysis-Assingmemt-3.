@@ -26,16 +26,16 @@ Inspection Breakdown (Based on Proof Image)
 The screenshot shows Packet **202** highlighted, which captures an active web application query:
 
 Selected Packet Metadata
-* **Packet Number:** 202
-* **Timestamp:** 243.150982269 seconds from capture start
-* **Source Host:** `192.168.3.25` (Local client machine)
-* **Destination Host:** `192.168.3.1` (DNS gateway server)
+* Packet Number: 202
+* Timestamp: 243.150982269 seconds from capture start
+* Source Host: `192.168.3.25` (Local client machine)
+* Destination Host: `192.168.3.1` (DNS gateway server)
 
 Protocol Layer Analysis
-* **Frame Info: Consists of 86 bytes of data captured on interface `eth0`.
-* **Ethernet II: Source MAC `00:00:27:6a:98:c9` (PCSystemtec) routing to Destination MAC `00:77:26:8a:f5:6a` (Huawei Device).
-* **Internet Protocol Version 4: Confirms routing from source `192.168.3.25` to destination `192.168.3.1`.
-* **User Datagram Protocol: Uses source port `40160` to communicate with standard DNS destination port `53`.
+* Frame Info: Consists of 86 bytes of data captured on interface `eth0`.
+* Ethernet II: Source MAC `00:00:27:6a:98:c9` (PCSystemtec) routing to Destination MAC `00:77:26:8a:f5:6a` (Huawei Device).
+* Internet Protocol Version 4: Confirms routing from source `192.168.3.25` to destination `192.168.3.1`.
+* User Datagram Protocol: Uses source port `40160` to communicate with standard DNS destination port `53`.
 
 Domain Name System (Query) Insights
 Expanding the DNS block reveals the structural parameters of this request:
