@@ -1,1 +1,27 @@
+Wireshark Network Capture Guide
+
+This guide covers launching a fresh packet capture session from the Wireshark splash screen to record web traffic.
+
+Setup Requirements
+* **Wireshark Version:** 4.6.6 (as shown in the welcome panel)
+* **Active User Profile:** victor (Default profile)
+
+Step-by-Step Instructions
+
+1. **Select Network Interface**
+   * Look at the **Capture** section in the lower half of the interface.
+   * Double-click **eth0** from the interface list (this is the active interface highlighted in blue).
+
+2. **Start the Capture Session**
+   * Click the blue **Shark Fin icon** located in the top-left toolbar area to begin recording live packets.
+
+3. **Generate Traffic**
+   * Open a web browser and navigate to a secure website (e.g., `https://example.com`).
+   * Let the page fully load so DNS resolution and TCP/TLS handshakes complete.
+
+4. **Stop the Capture**
+   * Click the **Red Square icon** next to the shark fin in the top toolbar to halt the live recording.
+
+## Expected Summary Output
+The main window will populate with live rows of data tracking your internet traffic, saving a temporary capture stream that logs your local host handshake to the web server.
 
