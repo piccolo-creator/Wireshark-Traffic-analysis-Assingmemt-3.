@@ -1,1 +1,47 @@
+Wireshark DNS Query Inspection Lab
+
+This guide explains how to isolate and analyze a specific Domain Name System (DNS) query packet to view its structural properties and transaction details.
+
+Objectives
+* Identify an outbound DNS request within filtered traffic.
+* Inspect Layer 2 through Layer 4 packet data.
+* Extract structural fields from the DNS query protocol layer.
+
+Step-by-Step Instructions
+
+1. Locate a DNS Query Packet
+   Filter the packet capture using the `dns` keyword.
+   Scan the **Info** column for outbound requests starting with `Standard query`.
+   Click on a query row (e.g., Packet **202**) to highlight it.
+
+2. Access Packet Details
+   Move down to the **Packet Details Pane** (middle section of the screen) to view the layer-by-layer breakdown.
+
+3. Expand Protocol Sections
+   Click the arrow icons to expand the relevant transport and application headers.
+   Specifically expand the **Domain Name System (query)** block at the bottom of the list.
+
+Inspection Breakdown (Based on Proof Image)
+
+The screenshot shows Packet **202** highlighted, which captures an active web application query:
+
+Selected Packet Metadata
+* **Packet Number:** 202
+* **Timestamp:** 243.150982269 seconds from capture start
+* **Source Host:** `192.168.3.25` (Local client machine)
+* **Destination Host:** `192.168.3.1` (DNS gateway server)
+
+Protocol Layer Analysis
+* **Frame Info: Consists of 86 bytes of data captured on interface `eth0`.
+* **Ethernet II: Source MAC `00:00:27:6a:98:c9` (PCSystemtec) routing to Destination MAC `00:77:26:8a:f5:6a` (Huawei Device).
+* **Internet Protocol Version 4: Confirms routing from source `192.168.3.25` to destination `192.168.3.1`.
+* **User Datagram Protocol: Uses source port `40160` to communicate with standard DNS destination port `53`.
+
+Domain Name System (Query) Insights
+Expanding the DNS block reveals the structural parameters of this request:
+* Transaction ID: `0x1da2` (Used to match this request later with its corresponding response)
+* Flags: `0x0100 Standard query` (Indicates a basic recursive query request)
+* Queries: Displays the target domain resource being requested:
+  * Target Hostname: `umar-faruq-tdh.netlify.app`
+  * Query Type: `A` (Requesting the standard IPv4 mapping address)
 
