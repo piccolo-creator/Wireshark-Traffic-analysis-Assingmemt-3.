@@ -1,1 +1,28 @@
+# Extracting HTTP Response Payload Data
+
+This guide covers how to isolate an HTTP transaction conversation to view and extract its raw transmitted payload data.
+
+## What You Will Do
+* Open a complete HTTP conversation using the Follow TCP Stream tool.
+* Examine the raw data content delivered back by the web server.
+
+## Steps
+
+1. **Follow the Traffic Stream**
+   * Right-click on your target HTTP response packet.
+   * Select **Follow** > **TCP Stream** from the pop-up options menu.
+
+2. **Isolate and Read the Payload Data**
+   * Review the pop-up stream conversation box.
+   * Look past the transmission headers to find the unencrypted output payload at the very end of the stream.
+
+## What the Image Shows
+
+By analyzing the open TCP Stream window (Stream **21**), you verified these plain-text metrics:
+
+* **The Web Request (Red Text):** Your browser performed a `GET /success.txt?ipv4 HTTP/1.1` request targeting the domain `://firefox.com`.
+* **The Server Response (Blue Text):** The server responded with an `HTTP/1.1 200 OK` status, proving the connection was accepted.
+* **Payload Type Header:** The header `Content-Type: text/plain` confirms that the payload is meant to be read as basic unencrypted text.
+* **The Transmitted Payload:** Underneath all headers, you can see the actual returned message payload consisting of a single text word: **`success`**.
+* **Data Scale:** The tracking status bar shows this entire exchange required a small footprint of just **681 bytes**.
 
