@@ -1,1 +1,28 @@
+# Examining Encrypted TLS Application Data
+
+This guide covers identifying the transition point from an open handshake negotiation to a fully encrypted data session.
+
+## What You Will Do
+* Locate the packet that activates traffic encryption.
+* Examine how data payloads appear after encryption is established.
+* Compare secure traffic properties against plain-text HTTP streams.
+
+## Steps
+
+1. **Locate the Security Activation Packet**
+   * Keep your packet stream filtered with the `tls` keyword.
+   * Scan the list for rows containing `Change Cipher Spec` or `Application Data` (like Packet **923**).
+   * Click on the row to view its structural details.
+
+2. **Inspect the Encrypted Payload**
+   * Move down to the Packet Details pane and expand the **Transport Layer Security** block.
+   * Note how individual data fields are hidden from view.
+
+## What the Image Shows
+
+By inspecting your selected row (**Packet 923**), you verified these secure connection properties:
+
+* **The Security Transition:** The packet contains a `Change Cipher Spec Protocol`, which tells both systems that every packet sent after this moment will be fully encrypted.
+* **Encrypted Verification:** Underneath the protocol layer, the details show `TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message`. Unlike your previous plain-text HTTP captures, there are no readable website headers or strings.
+* **HTTP Comparison:** In your earlier plain-text HTTP labs, you could easily read paths like `/success.txt` and text like `Host: example.com`. In this secure TLS stream, the payload is locked inside a generic cryptographic envelope (`Application Data`), making it impossible for outside snoopers to read your web activity.
 
