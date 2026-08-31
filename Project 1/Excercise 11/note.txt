@@ -1,30 +1,29 @@
-# Starting an HTTP Network Capture in Wireshark
+Starting an HTTP Network Capture in Wireshark
 
 This guide covers launching a fresh network packet capture session from the Wireshark splash screen to record unencrypted HTTP requests and responses.
 
-## What You Will Do
-* Choose your active network interface.
-* Start a live capture session to record web traffic.
-* Navigate to an HTTP website to generate unencrypted packet data.
-* Stop the capture once the web page finishes loading.
+ What I did
+* I Chose an active network interface.
+* I Started a live capture session to record web traffic.
+* Navigated to an HTTP website to generate unencrypted packet data.
+* Then Stopped the capture once the web page finishes loading.
 
-## Steps
+  Steps
 
-1. **Select the Network Interface**
-   * Look under the **Capture** section in the lower half of the screen.
-   * Double-click your active interface connected to the internet (such as **eth0** or **wi-fi**).
+1. Selected the Network Interface
+   * Looked under the Capture section in the lower half of the screen.
+   * Double-click your active interface connected to the internet (such as eth0** or wi-fi).
 
-2. **Start the Capture**
-   * Click the blue **Shark Fin icon** in the top-left toolbar to begin recording live traffic.
+2. Start the Capture
+   * Clicked the blue Shark Fin icon in the top-left toolbar to begin recording live traffic.
 
-3. **Generate HTTP Traffic**
-   * Open your web browser and go to an unencrypted website (for example, `http://example.com`).
-   * *Note:* Make sure to use `http://` instead of `https://` so the traffic remains readable and unencrypted.
-   * Wait for the web page to load completely.
+3. Generate HTTP Traffic
+   * Opened my web browser and went to an unencrypted website.
+   * Waited for the web page to load completely.
 
-4. **Stop the Recording**
-   * Click the **Red Square icon** next to the shark fin in the top toolbar to halt the live capture.
+4. Stop the Recording
+   * Clicked the Red Square icon next to the shark fin in the top toolbar to halt the live capture.
 
-## Expected Output Summary
-The main window will populate with live rows of data tracking your internet traffic, saving a temporary capture stream that explicitly captures the plain-text HTTP handshakes between your host and the web server.
+ Expected Output Summary
+The main window populated with live rows of data tracking your internet traffic, saving a temporary capture stream that explicitly captures the plain-text HTTP handshakes between your host and the web server.
 
