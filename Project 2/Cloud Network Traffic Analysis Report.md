@@ -8,7 +8,7 @@
 ---
 
  1. **Executive Summary**
-This report documents a hands-on network visibility and deep-packet analysis exercise. Live traffic was captured across local network interfaces to dissect foundational web infrastructure behaviors (DNS, TCP, HTTP, and TLS layers). Low-level packet parameters—including hardware MAC addresses, client/server IP mappings, TCP window constraints, and transaction handshake indicators—were verified. These on-premise baseline visibility elements are mapped explicitly into cloud architecture defense mechanisms, translating protocol forensics directly into enterprise AWS and Azure cloud security controls.
+This report documents a hands-on network visibility and deep-packet analysis exercise. Live traffic was captured across local network interfaces to dissect foundational web infrastructure behaviors (DNS, TCP, HTTP, and TLS layers). Low-level packet parameters including hardware MAC addresses, client/server IP mappings, TCP window constraints, and transaction handshake indicators were verified. These on premise baseline visibility elements are mapped explicitly into cloud architecture defense mechanisms, translating protocol forensics directly into enterprise AWS and Azure cloud security controls.
 
 ---
 
