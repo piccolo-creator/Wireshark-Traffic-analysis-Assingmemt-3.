@@ -1,6 +1,6 @@
 ☁️ **********Cloud Network Traffic Analysis Report**********
 
-**Author Profile:** victor  
+**Author Profile:** Victor  
 **Environment Baseline:** eth0 (Ubuntu 22.04 / Linux)  
 **Target Domain:** umar-faruq-tdh.netlify.app  
 **Local Client Host IP:** 10.0.2.15 / 192.168.3.25  
