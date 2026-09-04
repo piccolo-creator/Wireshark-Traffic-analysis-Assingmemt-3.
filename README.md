@@ -12,7 +12,7 @@ Welcome to the central engineering repository documenting our enterprise network
 2. **Architecture Mapping:** Conceptually translated layer-3 routing properties and layer-7 headers into secure AWS VPC configurations and Azure monitoring environments.
 3. **Control Enforcement:** Designed a resilient cloud monitoring posture using network detection rules and behavior profiling analytics.
 
-   ## 📝 License
+   ##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
